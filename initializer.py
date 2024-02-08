@@ -4,7 +4,7 @@ import mysql.connector as sql
 class Initializer:
     def __init__(self):
         # CREATING DATABASE AND REQUIRED TABLES
-        db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran")
+        db = sql.connect(host="localhost", user="localhost", passwd="123456")
         mycursor = db.cursor()
         print(" Creating Database")
         mycursor.execute("CREATE DATABASE if not exists School_DB")
