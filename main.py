@@ -10,13 +10,6 @@ choice_dict = {
 }
 choice = None
 
-# PRINT PROJECT DETAILS
-print("\t\t\t\t Modern Senior Secondary School, Patiala")
-print("\t\t\t\t _______________________________________")
-print("\n\t\t\t\t\t\t School Management System")
-print("\t\t\t\t\t\t ________________________\n")
-print("\t\t\t Created by Ranvir, Vinayak, Chetan     ||     Class XII \n\n")
-
 # CHECK IF DATABASE AND TABLES ARE THERE
 Initializer()
 
