@@ -6,7 +6,7 @@ class Management:
     def __init__(self, choice):
         """ RUNS WHEN THE OBJECT IS CREATED. SOME PRE-REQUISITE CONSTANTS ARE CREATED FOR LATER USE
             AND NEXT STEP IS CHOSEN """
-        db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran", database="School_DB")
+        db = sql.connect(host="localhost", user="localhost", passwd="123456", database="School_DB")
         self.actions = data_dict[choice]["Options"]
         self.queries = data_dict[choice]["Respective Queries"]
         self.db_name = data_dict[choice]['DB_Name']
@@ -22,7 +22,7 @@ class Management:
         self.action_chosen(self, choice)
 
     def add(self, choice):
-        db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran", database="School_DB")
+        db = sql.connect(host="localhost", user="localhost", passwd="123456", database="School_DB")
         mycursor = db.cursor()
         data_to_add = tuple()
 
@@ -60,7 +60,7 @@ class Management:
     def update(self, choice):
         try:
             # RETRIEVING ALREADY EXISTING IDS
-            db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran", database="School_DB")
+            db = sql.connect(host="localhost", user="localhost", passwd="123456", database="School_DB")
             mycursor = db.cursor()
             id_ = int(input(f"{data_dict[choice]['DB_Fields'][0]}: "))
             mycursor.execute(f"select {data_dict[choice]['DB_Fields'][0]} from {data_dict[choice]['DB_Name']}")
@@ -91,7 +91,7 @@ class Management:
 
         try:
             # RETRIEVING ALREADY EXISTING IDS
-            db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran", database="School_DB")
+            db = sql.connect(host="localhost", user="localhost", passwd="123456", database="School_DB")
             mycursor = db.cursor()
             id_ = int(input(f"{data_dict[choice]['DB_Fields'][0]}: "))
             mycursor.execute(f"select {data_dict[choice]['DB_Fields'][0]} from {data_dict[choice]['DB_Name']}")
@@ -119,7 +119,7 @@ class Management:
     def display(self, choice):
         try:
             # RETRIEVING DB DATA
-            db = sql.connect(host="localhost", user="Ranvir", passwd="ranvir_sran", database="School_DB")
+            db = sql.connect(host="localhost", user="localhost", passwd="123456", database="School_DB")
             mycursor = db.cursor()
             mycursor.execute(f"Select * from {data_dict[choice]['DB_Name']}")
         except:
